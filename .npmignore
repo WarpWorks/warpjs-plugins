@@ -1,0 +1,4 @@
+/.eslintrc*
+/.npmignore
+/**/*.test.js
+/warp-works-warpjs-plugins-*.tgz
