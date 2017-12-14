@@ -1,13 +1,15 @@
 {
   "name": "@warp-works/warpjs-plugins",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "WarpJS plugins utilities",
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm run -s lint && npm test",
-    "test:unit": "mocha \"*.unit.test.js\" \"lib/**/*.unit.test.js\"",
+    "prepublish": "npm run -s lint && npm -s test",
+    "coverage:unit": "nyc --report-dir=reports/coverage/unit npm run -s test:unit",
+    "coverage": "npm run -s coverage:unit",
     "lint:node": "eslint --fix --ignore-pattern \"*.test.js\" *.js lib",
     "lint": "npm run -s lint:node",
+    "test:unit": "mocha \"*.unit.test.js\" \"lib/**/*.unit.test.js\"",
     "test": "npm run -s test:unit"
   },
   "repository": {
@@ -31,13 +33,14 @@
   "devDependencies": {
     "@quoin/eslint-config-quoin": "0.2.0",
     "@quoin/node-test-helpers": "^0.3.1",
-    "eslint": "4.12.0",
+    "eslint": "4.13.x",
     "eslint-plugin-html": "4.0.1",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-json": "1.2.0",
     "eslint-plugin-node": "5.2.1",
     "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-standard": "3.0.1",
-    "mocha": "4.0.1"
+    "mocha": "4.0.1",
+    "nyc": "11.3.0"
   }
 }

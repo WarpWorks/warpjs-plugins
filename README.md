@@ -40,6 +40,9 @@ Gets all the plugins with the `plugin.type===type`. If `type`
 
 Returns the last plugin with the `type` === *type*.
 
+## .getPluginByName(name)
+
+Returns the last plugin with the `name` === *name*.
 
 ### .info()
 

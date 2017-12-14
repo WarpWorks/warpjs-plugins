@@ -60,6 +60,20 @@ describe("index", () => {
         });
     });
 
+    context(".getPluginByName()", () => {
+        it("should expose .getPluginByName", () => {
+            expect(moduleToTest).to.have.property('getPluginByName');
+        });
+
+        it("should be a function with 1 param", () => {
+            expect(moduleToTest.getPluginByName).to.be.a('function').and.to.have.lengthOf(1);
+        });
+
+        after(() => {
+            delete clone.getPluginByName;
+        });
+    });
+
     context(".register()", () => {
         it("should expose .register", () => {
             expect(moduleToTest).to.have.property('register');
