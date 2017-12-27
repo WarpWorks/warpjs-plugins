@@ -1,6 +1,7 @@
 # WarpJS Plugins
 
-Library to manipulate WarpJS plugins.
+Library to manipulate WarpJS plugins. See the [HOWTO](HOWTO.md) to learn how to
+write your own plugins.
 
 ## API
 

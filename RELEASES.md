@@ -1,5 +1,9 @@
 # Releases
 
+## 1.2.2 - 2017-12-27
+
+- Verify if `pluginApp` is defined before adding it to the app.
+
 ## 1.2.1 - 2017-12-13
 
 - Adding `getPluginByName(name)`.
