@@ -1,4 +1,6 @@
-/.eslintrc*
+/.*rc*
+/.nyc_output
 /.npmignore
 /**/*.test.js
+/reports
 /warp-works-warpjs-plugins-*.tgz

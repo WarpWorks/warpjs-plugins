@@ -1,5 +1,9 @@
 # Releases
 
+## 1.2.3 - 2018-01-04
+
+- Removed coverage reports from published package.
+
 ## 1.2.2 - 2017-12-27
 
 - Verify if `pluginApp` is defined before adding it to the app.
