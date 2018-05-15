@@ -1,6 +1,6 @@
 {
   "name": "@warp-works/warpjs-plugins",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "WarpJS plugins utilities",
   "main": "index.js",
   "scripts": {
