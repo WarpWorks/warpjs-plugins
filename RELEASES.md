@@ -1,5 +1,9 @@
 # Releases
 
+## 1.2.5 - 2018-05-25
+
+- Updated libraries.
+
 ## 1.2.4 - 2018-05-15
 
 - Fixed error about deprecated _meta.
