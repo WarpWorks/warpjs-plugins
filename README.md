@@ -31,10 +31,15 @@ The `pluginsConfigs` is an array of:
 If a `type` is defined, all plugins with a given type should implement the same
 API (this API is out of scope for this module).
 
+See [RESERVED_PLUGIN_TYPES](./lib/reserved-plugin-types.js) for a list of
+reserved plugin types. You can defined your own types, but these will affect
+Studio and Content sides.
+
 
 ### .getPlugins([type])
 
-Gets all the plugins with the `plugin.type===type`. If `type`
+Gets all the plugins with the `plugin.type===type`. If `type` is not defined,
+all plugins are returned.
 
 
 ### .getPlugin(type)

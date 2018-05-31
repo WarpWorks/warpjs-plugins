@@ -12,94 +12,50 @@ describe("index", () => {
         clone = _.clone(moduleToTest);
     });
 
-    it("should expose an object", () => {
+    it("should export an object", () => {
         expect(moduleToTest).to.be.an('object');
     });
 
-    context(".init()", () => {
-        it("should expose .init", () => {
-            expect(moduleToTest).to.have.property('init');
-        });
-
-        it("should be a function with 3 param", () => {
-            expect(moduleToTest.init).to.be.a('function').and.to.have.lengthOf(3);
-        });
-
-        after(() => {
-            delete clone.init;
-        });
-
+    it("should expose RESERVED_PLUGIN_TYPES as an object", () => {
+        expect(moduleToTest).to.have.property('RESERVED_PLUGIN_TYPES');
+        expect(moduleToTest.RESERVED_PLUGIN_TYPES).to.be.an('object');
+        delete clone.RESERVED_PLUGIN_TYPES;
     });
 
-    context(".getPlugins()", () => {
-        it("should expose .getPlugins", () => {
-            expect(moduleToTest).to.have.property('getPlugins');
-        });
-
-        it("should be a function with 1 param", () => {
-            expect(moduleToTest.getPlugins).to.be.a('function').and.to.have.lengthOf(1);
-        });
-
-        after(() => {
-            delete clone.getPlugins;
-        });
+    it("should expose .init() with 3 params", () => {
+        expect(moduleToTest).to.have.property('init');
+        expect(moduleToTest.init).to.be.a('function').and.to.have.lengthOf(3);
+        delete clone.init;
     });
 
-
-    context(".getPlugin()", () => {
-        it("should expose .getPlugin", () => {
-            expect(moduleToTest).to.have.property('getPlugin');
-        });
-
-        it("should be a function with 1 param", () => {
-            expect(moduleToTest.getPlugin).to.be.a('function').and.to.have.lengthOf(1);
-        });
-
-        after(() => {
-            delete clone.getPlugin;
-        });
+    it("should expose .getPlugins() with 1 param", () => {
+        expect(moduleToTest).to.have.property('getPlugins');
+        expect(moduleToTest.getPlugins).to.be.a('function').and.to.have.lengthOf(1);
+        delete clone.getPlugins;
     });
 
-    context(".getPluginByName()", () => {
-        it("should expose .getPluginByName", () => {
-            expect(moduleToTest).to.have.property('getPluginByName');
-        });
-
-        it("should be a function with 1 param", () => {
-            expect(moduleToTest.getPluginByName).to.be.a('function').and.to.have.lengthOf(1);
-        });
-
-        after(() => {
-            delete clone.getPluginByName;
-        });
+    it("should expose .getPlugin() with 1 param", () => {
+        expect(moduleToTest).to.have.property('getPlugin');
+        expect(moduleToTest.getPlugin).to.be.a('function').and.to.have.lengthOf(1);
+        delete clone.getPlugin;
     });
 
-    context(".register()", () => {
-        it("should expose .register", () => {
-            expect(moduleToTest).to.have.property('register');
-        });
-
-        it("should be a function with 4 params", () => {
-            expect(moduleToTest.register).to.be.a('function').and.to.have.lengthOf(4);
-        });
-
-        after(() => {
-            delete clone.register;
-        });
+    it("should expose .getPluginByName() with 1 param", () => {
+        expect(moduleToTest).to.have.property('getPluginByName');
+        expect(moduleToTest.getPluginByName).to.be.a('function').and.to.have.lengthOf(1);
+        delete clone.getPluginByName;
     });
 
-    context(".info()", () => {
-        it("should expose .info", () => {
-            expect(moduleToTest).to.have.property('info');
-        });
+    it("should expose .register", () => {
+        expect(moduleToTest).to.have.property('register');
+        expect(moduleToTest.register).to.be.a('function').and.to.have.lengthOf(4);
+        delete clone.register;
+    });
 
-        it("should be a function with no params", () => {
-            expect(moduleToTest.info).to.be.a('function').and.to.have.lengthOf(0);
-        });
-
-        after(() => {
-            delete clone.info;
-        });
+    it("should expose .info() with no params", () => {
+        expect(moduleToTest).to.have.property('info');
+        expect(moduleToTest.info).to.be.a('function').and.to.have.lengthOf(0);
+        delete clone.info;
     });
 
     context("After all properties tests", () => {
