@@ -1,5 +1,9 @@
 # Releases
 
+## 1.2.6 - 2018-06-30
+
+- Allowing new class-based plugins.
+
 ## 1.2.5 - 2018-05-25
 
 - Updated libraries.
