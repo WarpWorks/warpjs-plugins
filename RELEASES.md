@@ -1,5 +1,9 @@
 # Releases
 
+## 1.2.7 - 2019-07-10
+
+- Fix lodash vulnerability CVE-2019-10744.
+
 ## 1.2.6 - 2018-06-30
 
 - Allowing new class-based plugins.
