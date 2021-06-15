@@ -3,6 +3,10 @@
   "version": "2.0.0-rc.1",
   "description": "WarpJS plugins utilities",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "tag": "node14"
+  },
   "scripts": {
     "prepack": "npm run -s eslint && npm -s test",
     "coverage:unit": "nyc --report-dir=reports/coverage/unit npm run -s test:unit",
