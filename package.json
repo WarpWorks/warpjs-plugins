@@ -1,14 +1,18 @@
 {
   "name": "@warp-works/warpjs-plugins",
-  "version": "1.2.7",
+  "version": "2.0.0-rc.1",
   "description": "WarpJS plugins utilities",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "tag": "node14"
+  },
   "scripts": {
-    "prepack": "npm run -s lint && npm -s test",
+    "prepack": "npm run -s eslint && npm -s test",
     "coverage:unit": "nyc --report-dir=reports/coverage/unit npm run -s test:unit",
     "coverage": "npm run -s coverage:unit",
-    "lint:node": "eslint --fix --ignore-pattern \"*.test.js\" *.js lib",
-    "lint": "npm run -s lint:node",
+    "eslint:node": "eslint --fix --ignore-pattern \"*.test.js\" *.js lib",
+    "eslint": "npm run -s eslint:node",
     "test:unit": "mocha \"*.unit.test.js\" \"lib/**/*.unit.test.js\"",
     "test": "npm run -s test:unit"
   },
@@ -35,21 +39,20 @@
   },
   "homepage": "https://github.com/WarpWorks/warpjs-plugins#readme",
   "dependencies": {
-    "debug": "~4.1.1",
-    "lodash": "~4.17.14"
+    "debug": "^4.3.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@quoin/eslint-config-quoin": "~0.3.1",
-    "@quoin/node-test-helpers": "~1.0.3",
-    "eslint": "~6.0.1",
-    "eslint-config-standard": "~13.0.0",
-    "eslint-plugin-html": "~6.0.0",
-    "eslint-plugin-import": "~2.18.0",
-    "eslint-plugin-json": "~1.4.0",
-    "eslint-plugin-node": "~9.1.0",
-    "eslint-plugin-promise": "~4.2.1",
-    "eslint-plugin-standard": "~4.0.0",
-    "mocha": "~6.1.4",
-    "nyc": "~14.1.1"
+    "@quoin/eslint-config-quoin": "^1.0.0-rc.2",
+    "@quoin/node-test-helpers": "^2.0.0-rc.1",
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "mocha": "^9.0.0",
+    "nyc": "^15.1.0"
   }
 }
