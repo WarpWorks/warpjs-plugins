@@ -1,5 +1,9 @@
 # Releases
 
+## 2.0.0-rc.1 - 2021-06-15
+
+- Updating packages and node@14
+
 ## 1.2.7 - 2019-07-10
 
 - Fix lodash vulnerability CVE-2019-10744.
